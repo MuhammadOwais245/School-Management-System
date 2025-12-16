@@ -1,0 +1,67 @@
+/* RESET */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f5f6fa;
+}
+
+/* Wrapper for footer bottom */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN CONTENT */
+.content-wrapper {
+    flex: 1;
+    padding-top: 70px;
+}
+.content-wrapper.no-padding {
+        padding-top: 0 !important;
+    }
+
+/* NAVBAR (simple black) */
+.navbar {
+    background: #000 !important;
+}
+
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #ffd700 !important;
+    }
+
+/* CARDS */
+.card {
+    border: none;
+}
+
+/* FOOTER (simple black) */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.page-title {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #ffffff; /* white text */
+    margin: 20px 0;
+    /* stylish black outline */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+

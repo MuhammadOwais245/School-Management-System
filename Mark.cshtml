@@ -1,0 +1,27 @@
+﻿@using SchoolManagementSystem.Models
+@model IEnumerable<Student>
+
+<h2>Mark Attendance</h2>
+
+<form asp-action="Save" method="post">
+    <input type="hidden" name="classId" value="@ViewBag.ClassId" />
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Student</th>
+            <th>Present</th>
+        </tr>
+
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Name</td>
+                <td>
+                    <input type="checkbox" name="presentStudents" value="@s.Id" />
+                </td>
+            </tr>
+        }
+    </table>
+
+    <button class="btn btn-success">Save Attendance</button>
+</form>

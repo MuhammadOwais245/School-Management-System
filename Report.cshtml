@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Attendance>
+
+<h2>Attendance Report</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Date</th>
+        <th>Student</th>
+        <th>Status</th>
+    </tr>
+
+    @foreach (var a in Model)
+    {
+        <tr>
+            <td>@a.Date.ToShortDateString()</td>
+            <td>@a.Student.Name</td>
+            <td>
+                @if (a.IsPresent)
+                {
+                    <span class="text-success">Present</span>
+                }
+                else
+                {
+                    <span class="text-danger">Absent</span>
+                }
+            </td>
+        </tr>
+    }
+</table>

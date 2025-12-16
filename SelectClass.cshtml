@@ -1,0 +1,12 @@
+﻿<h2>Select Class</h2>
+
+<form asp-action="Mark" method="get">
+    <select name="classId" class="form-control">
+        @foreach (var c in ViewBag.Classes)
+        {
+            <option value="@c.Id">@c.ClassName</option>
+        }
+    </select>
+
+    <button class="btn btn-primary mt-2">Next</button>
+</form>
